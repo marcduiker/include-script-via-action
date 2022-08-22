@@ -19,7 +19,7 @@ jobs:
         with:
           submodules: true
       - name: Insert script
-        run: sed -i -e 's/<!-- [REPLACE] -->/${{ secrets.PH_SCRIPT }}' /index.html
+        run: sed -i -e 's/<meta name=replace/>/${{ secrets.PH_SCRIPT }}' /index.html
 
       - name: Build And Deploy
         id: builddeploy
